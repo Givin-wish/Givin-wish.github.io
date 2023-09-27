@@ -93,7 +93,7 @@ color: #ea1f33;
 }
 #home .left p {
     margin-bottom: 35px;
-    color: #999;
+    color: #000;
     font-size: 13px;
 }
 #home .left a {
@@ -115,9 +115,6 @@ color: #ea1f33;
     
 #home .flex-item img {
     width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
 }
 #cars {
@@ -125,17 +122,38 @@ color: #ea1f33;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
-
-
- h2 {
-    display: flex;
-    align-items: center;
+.section_title {
+    text-transform: uppercase;
     justify-content: center;
-    font-size: 25px;
-
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    position:relative;
+    font-size: 25;
 }
+
+.section_title::before{
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    content: "";
+    background-color: #ea1f33;
+    width: 80%;
+    height: 7px;
+    border-radius: 20px;
+}
+.section_title::after{
+    position: absolute;
+    top:0;
+    right: 80px;
+    content: "";
+    background-color: #ea1f33;
+    width: 80%;
+    height: 7px;
+    border-radius: 20px;
+}
+
 .images {
     margin: 10% auto;
     padding: 0 8%;
@@ -168,7 +186,93 @@ color: #ea1f33;
  .images li :hover{
     transform: scale(1.1);
     margin: 20px;
+}
+
+.images li span {
+    color: #000;
+    font-size: 15px;
+}
+
+#services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+#concontact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 12%;
+    right: 80%;
+}
+.licalisation_contact_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    width: 100%;
+    margin: 50px 0;
+    height: 78vh;
+    
+}
+.localisation {
+    width: 30%;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) ;
+}
+.localisation iframe {
+    width: 100%;
+    border-radius: 6px;
+}
+.licalisation_contact_div .form_contact {
+    width: 22%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 6px;
+}
+.licalisation_contact_div h3 {
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+.localisation_contact_div .form_contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.form_contact form input ,textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 10px;
+    resize: none;
+
+}
+.form_contact form input[type="submit"]{
+    margin-bottom: 0;
+    background-color: #ea1f33;
+    color:#fff;
+    border: 0;
+}
+ footer {
+    background-color: #ea1f33;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 15px;
  }
+
+
 
 
 
